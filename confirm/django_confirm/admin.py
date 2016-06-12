@@ -19,7 +19,6 @@ from django.conf import settings
 from django.contrib import admin
 
 from .models import Confirmation
-from .tasks import send_email
 
 
 def resend(modeladmin, request, queryset):
@@ -27,6 +26,7 @@ def resend(modeladmin, request, queryset):
 
     for obj in queryset:
         if BROKER_URL:  # send via celery
+            from .tasks import send_email
             send_email.delay(obj.pk)
         else:  # send directly
             obj.handle()
