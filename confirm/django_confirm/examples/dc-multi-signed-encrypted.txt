@@ -1,0 +1,52 @@
+MIME-Version: 1.0
+Subject: test
+From: mati@fsinf.at
+To: mati@fsinf.at
+Date: Sun, 12 Jun 2016 14:13:52 -0000
+Message-ID: <20160612141352.5138.58471@dt>
+Content-Type: multipart/encrypted; protocol="application/pgp-encrypted";
+ boundary="===============0580315358981645659=="
+
+--===============0580315358981645659==
+Content-Type: application/pgp-encrypted
+MIME-Version: 1.0
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--===============0580315358981645659==
+Content-Type: application/octed-stream; name="encrypted.asc"
+MIME-Version: 1.0
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+hQIMA835Llf0D9UxAQ/+Pzy8CkGkAVtoW7HOOyQBXbcmRxHwlQSSWxRK4MXq7fsv
+I1iTRZdVYV2sJapxCIaJ2h9aXU3PqpAt1xuBgKjQION66sDuW+YX2eaHQJZVM9h5
+c91SJFkDTJ5qGbcPUfxOfJ/RrLNEhhM3RxFMJeQjebT6x/YDPYpkoTnZwkSiEUbT
+idakvEDDhBzILZvR2p8BXcC2+ANdj2/yyLRA9lP17GDtsTyUibpl5MZCZuAoHx7e
+gyTyo4rI9JEFmi6qFo7HHEr/hQcrazSFhN09A7t+cvK6wo/kNfrpHtBmFuVXBYTN
+o8CyDRf/LSGFtSQP2EhWCV3u1eUSqQmXpk5DGeOy8me45Qzfh75lfxHpeirEBI2O
+EN/I9rtdbT7vWCzvEcfx+a+PkrwCBTmKjnvVyywYo8UfpcnfUKOIXIXSAvkMfj+E
+u9GMFDxR6c/9l7dXGBV4O3iD92U5UkGZT/tKsFrHJW1j2XOaB1ooSaOaaWcZtR3A
+DkAkQjPk0gjgdskRu8l01ZF++6J1yyHGOWhCaSqrbZ4QQL1UzgPYr8h0dzShEgL4
+Ao5KCgI/JVBiao0d+33J490ejxGEP2v6u2YeJMYWF7y+mMrtwEGn39hJoRb2tN/5
+ZxKxui2Euj5ZCovUkU2r0yjNW38WkRiVosM150x3cruUjQplBumWcUKWmObmjj3S
+6QHXBdBgSM3o1pj42ZEMhti8bz4DSs+1Hc4FO4z+gIsP4Z9Hs3HXQaRz5OnTM77/
+T+nMDdH59kfLoUfN9TUubZDb516ZDP6loaG5lF1M4OVD9+AMoFUlMJUy3Rzmmyh5
+L0fXZ/2yctDn2Ulakv2v6C02npxNijF0BpdNPoe67EJdGBV4lpHtZ6BVDZO58eXE
+vPfzdXGBYmH+rgDdEKM8QhKb+3N9sbpN0wAGP3FrwGP3hN3MVDwRkB3UzE38zfuB
+VSVcOE3X3/zS86mxILSfHTz/RO9+271OElCYeLXqC+NJYOKA3IsyEQxpq7ExqlsK
+71vcJ+vJQ2/lo+1CIhud9mwE6EROYJKjnAkiOV/srvr7icN/dCVupNLLzEO/u+5Q
+aGEWbHpOB1ja4XnVlTRXjm1+F2qHSzlxy8LuthmvaCNhq9fg6ALRlfBVNsXXeqRi
+AgGRzV6nv+g0J8HKBN8iufbXJG/O/vzYBFbvDDjhod/1HLh3ICJn8/CdPgSwNuWi
+sKjaYbQu10AG89hVoL/yLx/ZWU+AAwh/hlt7rAM70VduwV0teMmwygqHkoyDBKd7
+wf7rIHc99bljv0y2IbfbKiDQrr92k0fQiEQ+jc/jS3Y42RlLmVg6Wa5xDepHU9WT
+Lj7MDbgruoW+pleIaFWFH15ZnRvxCHuEi5H7sfWmBYF6LXfW1LDc8Fpl9ZwWU41X
+iS2JEbjakgJJvsaF5j+79+IbcibKPGqhjW8sVSS6wA==
+=jGhC
+-----END PGP MESSAGE-----
+
+--===============0580315358981645659==--

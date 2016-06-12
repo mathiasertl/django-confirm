@@ -1,0 +1,45 @@
+To: Mathias Ertl <mati@fsinf.at>
+From: Mathias Ertl <mati@er.tl>
+Subject: txt-encrypted
+Date: Sun, 12 Jun 2016 15:47:30 +0200
+Mime-Version: 1.0
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="KeogwPT3pDwBqkPek6HGS85XXprnk1qmw"
+
+This is an OpenPGP/MIME encrypted message (RFC 4880 and 3156)
+--KeogwPT3pDwBqkPek6HGS85XXprnk1qmw
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--KeogwPT3pDwBqkPek6HGS85XXprnk1qmw
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+hQIMA835Llf0D9UxAQ//UcEXpE4y3oUxjChJm6l0usGc8p15940EapNBpygekbFt
+2l9VJPbJnTvnqJZ7SEE4W7yfxhmot0juQg7vjrc1Z2Z7YFa4/6Hq+pZ3+5z/ZoUg
+14I0Mswb2towu1bWnCNgEhpfq4LXp63HKbUrQ3DiDlh6hFxVEqx8X5V6DMCZHrrR
+ZwKMOfxclU1OKVxgUIyMe5frvVq6DJObAu5i6ZdydOjHTBrpmdPb6ohkhttHIhWS
+KvuWful07riP33aupo8ZKEsIwAU+dOgFdtGuINe28XQdgid1NJ5El2/xDITISO9d
+sFMHuAejTKhnRdhNxl44OBIweyjlBn/tDOEnMXbUHxRUnbiOlXOlqpHIBrpUa1uL
+ntwyGgdiUYTWHjBePLB9s/ttOOX/LfSDmn/URYVOipudP1FONKvx5Kn3E7fswuce
+MnvX0n1Deic0BW/fXrPEm3nau2128J4W9x6IF/GBl/PF2NeDe+e9F29lhuBMHyPy
+C2kIOLKu63R+OdKLdI637jIUwEKX7PGHx2cwH0+a6Srsik8h7ncplS0J9lsxDUEi
+tnnQE58A2mOrMQ9eTbqpOhZhPZjSmHsmafLuZu9mV3f29cbiplNMVd+xw1OZ28xC
+Yk4/A14P2iUrqEIzw35X5kVns3Na5ABf86LZWLbv/ccHP7mC6JLwohil/mua6LnS
+wB8BL4mhu3vLJt+Ui0lnhx3uu/xTIorkxzOTWP5qHDloGDnqRYOpFQ0RQkdLjPmz
+Q0UPjEYXAdpfclCWTphLt5Jxi6i+rjWFqun+VhLyJDWXXDPNBQWNTW0N95Q1xlz/
+VamALsIyF2WVhlWyfKmNArztH5Z+8WOwZKc0H8Vg6BSgQvaeBDfmMyudRcjmTZRM
+br9lzHsstTV8JmsZ+jkdbZDOv3BpPiHTPFTcry+8XtbmWva83GNlZzNBM5IzrmvD
+9KmMifHGw12zrC6KO2oj3fizUbsVWtpGhN6sfn6SlynS
+=NjUx
+-----END PGP MESSAGE-----
+
+--KeogwPT3pDwBqkPek6HGS85XXprnk1qmw--
+

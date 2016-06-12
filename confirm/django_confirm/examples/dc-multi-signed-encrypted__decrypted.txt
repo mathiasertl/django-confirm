@@ -1,0 +1,19 @@
+Content-Type: multipart/alternative;
+ boundary="===============3998163540939180025=="
+MIME-Version: 1.0
+
+--===============3998163540939180025==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A test email.
+
+--===============3998163540939180025==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+test html!
+
+--===============3998163540939180025==--

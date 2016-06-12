@@ -1,0 +1,42 @@
+To: Mathias Ertl <mati@fsinf.at>
+From: Mathias Ertl <mati@er.tl>
+Subject: txt-signed
+Date: Sun, 12 Jun 2016 15:47:00 +0200
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+ protocol="application/pgp-signature";
+ boundary="j9wNhv8ao8437NvpaNTLqqfNlXVGQj3Kr"
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--j9wNhv8ao8437NvpaNTLqqfNlXVGQj3Kr
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+txt-signed
+
+
+--j9wNhv8ao8437NvpaNTLqqfNlXVGQj3Kr
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQIcBAEBCAAGBQJXXWfUAAoJEHC9lmT6OUfNOVUQAMD0EGoSZHD/v354MCVCG09R
+QlJsD8DTXc0nP7fVE+99MquduakCksX2dL23uDVDbzm9yC2QHJUGK1705YGKWP5C
+XbCNkFMfUSaXwBPbDchlLDepkZ+1Vs4eZNZ55MR77z4HKC+QwWvfED+G8PeMGWP1
+bXzvq0N3cawp2TtDZC5g++NvzDU7qahyKpG7Tz90xK62dl3lYlqLyObLtVCI7rpM
+6qG4CaVz9EmL1z2Zb9DwgVSkaAqoM+//q3Qg7BAmO8MJj0ji/z3x5OI+5DF4fS7Y
+xLhsYup3mQZ9a4lcHRXyW3UfQqi2n/CZm8b7ubEoNnNz9+esQr9qyZTGt6y2y3pc
+YBjyRW+60GRJZTvQlWUHhOQq7ZZrfy4d16ZAizBEGSdplGAjkkGxU3loUBJjtOlI
+Il4eRem3wqrPr9D/A2egzts2g5VnkwDiikmppRSlOeVFtLcRL2Gf3g2+yTYl9Yfw
+mEbNwaYCX86zhE+6lz7B2MnhZexlConyj9vq229PohVVNtZySDkZvJ1w0Q/SeNYl
+XuSZR6v/d0xD9EZL/6av3zjv4Nce8bpIDPdcAJ4CdiQEatMzqXoe3R2BooIvQ1ym
+wNa9okOH/8/lEhU7WeXU+kUg/TfvJy9rouDRiHbK1CfxPcg7zeVnrFohsIkzf+0f
+PGO7poXwc3RWCnUMY28J
+=S7gq
+-----END PGP SIGNATURE-----
+
+--j9wNhv8ao8437NvpaNTLqqfNlXVGQj3Kr--
+
