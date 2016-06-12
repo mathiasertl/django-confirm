@@ -41,7 +41,8 @@ from .lock import GpgLock
 from .managers import ConfirmationManager
 from .querysets import ConfirmationQuerySet
 
-_default_timeout_delta = getattr(settings, 'DJANGO_CONFIRM_DEFAULT_TIMEOUT', 86400)
+_default_timeout_delta = getattr(settings, 'DJANGO_CONFIRM_DEFAULT_TIMEOUT',
+                                 timedelta(hours=24))
 
 
 class GPGAlternatives(EmailMultiAlternatives):
@@ -60,7 +61,7 @@ def default_key():
     return salted_hmac(salt, value).hexdigest()
 
 def default_expires():
-    return timezone.now() + timedelta(_default_timeout_delta)
+    return timezone.now() + _default_timeout_delta
 
 def default_payload():
     return {}
