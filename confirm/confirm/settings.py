@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
+from __future__ import absolute_import
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -37,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_confirm',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -119,3 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+try:
+    from .localsettings import *
+except ImportError:
+    pass
