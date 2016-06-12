@@ -248,7 +248,7 @@ class Confirmation(models.Model):
         self.payload['extra'] = extra_context
         self.save()
 
-        if settings.BROKER_URL and False:  # send with celery
+        if getattr(settings, 'BROKER_URL', None):  # send with celery
             pass
         else:  # send directly
             self.handle()
