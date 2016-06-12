@@ -1,19 +1,18 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# This file is part of django-xmpp-register (https://account.jabber.at/doc).
+# This file is part of django-confirm (https://github.com/mathiasertl/django-confirm).
 #
-# django-xmpp-register is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by the Free
-# Software Foundation, either version 3 of the License, or (at your option) any
-# later version.
+# django-confirm is free software: you can redistribute it and/or modify it under the terms of the
+# GNU General Public License as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
 #
-# django-xmpp-register is distributed in the hope that it will be useful, but
-# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
-# more details.
+# django-confirm is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See
+# the GNU General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License along with
-# django-xmpp-register.  If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU General Public License along with django-confirm.  If
+# not, see <http://www.gnu.org/licenses/>.
 
 from __future__ import unicode_literals, absolute_import
 
@@ -38,6 +37,7 @@ import jsonfield
 from .exceptions import GpgError
 from .exceptions import GpgFingerprintError
 from .exceptions import GpgKeyError
+from .lock import GpgLock
 
 _default_timeout_delta = getattr(settings, 'DJANGO_CONFIRM_DEFAULT_TIMEOUT', 86400)
 
@@ -204,7 +204,8 @@ class Confirmation(models.Model):
 
         msg = self.get_message()
         if self.payload['gpg_opts']:
-            msg = self.handle_gpg(msg)
+            with GpgLock(cache_fallback=getattr(self.backend, 'client')):
+                msg = self.handle_gpg(msg)
 
         return msg.send()
 
@@ -248,6 +249,8 @@ class Confirmation(models.Model):
         self.save()
 
         if getattr(settings, 'BROKER_URL', None):  # send with celery
+            from .tasks import send_email
+            send_email.delay(self.pk)
             pass
         else:  # send directly
             self.handle()
