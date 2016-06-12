@@ -26,3 +26,6 @@ class ConfirmationQuerySet(QuerySet):
 
     def expired(self):
         return self.filter(expires__lt=timezone.now())
+
+    def purpose(self, purpose):
+        return self.filter(purpose=purpose)
