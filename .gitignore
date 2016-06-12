@@ -5,6 +5,7 @@
 /confirm/.gpg
 /confirm/confirm/localsettings.py
 /confirm/db.sqlite3
+/confirm/django_confirm.egg-info/
 /dist/
 /include/
 /lib/
