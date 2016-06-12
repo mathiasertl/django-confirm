@@ -15,13 +15,26 @@
 
 from __future__ import unicode_literals, absolute_import
 
+from django.conf import settings
 from django.contrib import admin
 
 from .models import Confirmation
+from .tasks import send_email
+
+
+def resend(modeladmin, request, queryset):
+    BROKER_URL = getattr(settings, 'BROKER_URL', None)
+
+    for obj in queryset:
+        if BROKER_URL:  # send via celery
+            send_email.delay(obj.pk)
+        else:  # send directly
+            obj.handle()
 
 
 @admin.register(Confirmation)
 class ConfirmationAdmin(admin.ModelAdmin):
+    actions = [resend, ]
     list_display = ['recipient', 'purpose', 'created', 'expires', ]
 
     def recipient(self, obj):
