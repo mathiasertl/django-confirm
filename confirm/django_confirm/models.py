@@ -197,9 +197,11 @@ class Confirmation(models.Model):
             raise NotImplemented("Cannot yet handle non-multipart messages")  # TODO
 
         if self.payload['gpg_encrypt'] or self.payload['gpg_key']:
-            return self.gpg_encrypt(submessage)
+            with GpgLock():
+                return self.gpg_encrypt(submessage)
         elif self.payload['gpg_sign']:
-            return self.gpg_sign(submessage)
+            with GpgLock():
+                return self.gpg_sign(submessage)
         else:
             return msg
 
@@ -208,8 +210,7 @@ class Confirmation(models.Model):
 
         msg = self.get_message()
         if self.payload['gpg_opts']:
-            with GpgLock(cache_fallback=getattr(self.backend, 'client')):
-                msg = self.handle_gpg(msg)
+            msg = self.handle_gpg(msg)
 
         return msg.send()
 
