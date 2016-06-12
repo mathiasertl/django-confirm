@@ -38,6 +38,8 @@ from .exceptions import GpgError
 from .exceptions import GpgFingerprintError
 from .exceptions import GpgKeyError
 from .lock import GpgLock
+from .managers import ConfirmationManager
+from .querysets import ConfirmationQuerySet
 
 _default_timeout_delta = getattr(settings, 'DJANGO_CONFIRM_DEFAULT_TIMEOUT', 86400)
 
@@ -66,6 +68,8 @@ def default_payload():
 
 @python_2_unicode_compatible
 class Confirmation(models.Model):
+    objects = ConfirmationManager.from_queryset(ConfirmationQuerySet)()
+
     key = models.CharField(max_length=40, default=default_key)
     created = models.DateTimeField(auto_now_add=True)
     expires = models.DateTimeField(default=default_expires)

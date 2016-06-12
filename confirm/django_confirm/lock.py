@@ -42,7 +42,7 @@ class FileLock(object):
     """
 
     def __init__(self, path, cache_fallback=None):
-        self.path = '%s.xmppaccount.lock' % path
+        self.path = '%s.lock' % path
         self.cache = cache_fallback
 
         # TODO: Memcached caches should be suitable as well:
