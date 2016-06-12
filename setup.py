@@ -55,6 +55,7 @@ setup(
     install_requires=[
         'Django>=1.8',
         'django-jsonfield==1.0.0',
+        'redis>=2.10.5',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',

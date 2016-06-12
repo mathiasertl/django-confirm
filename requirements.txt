@@ -1,3 +1,4 @@
 Django==1.9.7
 django-jsonfield==1.0.0
 python-gnupg==0.3.8
+redis==2.10.5
