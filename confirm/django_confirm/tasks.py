@@ -26,3 +26,10 @@ from .models import Confirmation
 def send_email(self, pk):
     key = Confirmation.objects.get(pk=pk)
     key.handle()
+
+
+@shared_task(bind=True)
+def cleanup(self, pk):
+    """Task that deletes all expired confirmations."""
+
+    Confirmation.objects.expired().delete()
