@@ -1,10 +1,12 @@
 *.sw[op]
 *.py[co]
 /bin/
+/build/
+/confirm/.gpg
+/confirm/confirm/localsettings.py
+/confirm/db.sqlite3
+/dist/
 /include/
 /lib/
 /pip-selfcheck.json
 /share/
-/confirm/confirm/localsettings.py
-/confirm/db.sqlite3
-/confirm/.gpg
