@@ -1,1 +1,1 @@
-default_app_config = 'django_ca.apps.DjangoConfirmConfig'
+default_app_config = 'django_confirm.apps.DjangoConfirmConfig'
