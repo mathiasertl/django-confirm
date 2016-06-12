@@ -22,8 +22,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.nonmultipart import MIMENonMultipart
 from email.mime.base import MIMEBase
 
-import gnupg
-
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.core.mail import EmailMessage
@@ -110,6 +108,7 @@ class Confirmation(models.Model):
             )
 
     def gpg_keyring(self):
+        import gnupg
         return gnupg.GPG(**self.payload['gpg_opts'])
 
     @property
