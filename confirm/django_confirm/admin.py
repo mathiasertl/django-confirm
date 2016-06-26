@@ -38,4 +38,4 @@ class ConfirmationAdmin(admin.ModelAdmin):
     list_display = ['recipient', 'purpose', 'created', 'expires', ]
 
     def recipient(self, obj):
-        return obj.payload['recipient']
+        return obj.payload.get('recipient', '')
