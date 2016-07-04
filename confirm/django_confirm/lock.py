@@ -70,13 +70,11 @@ class FileLock(object):
         self.exit = lambda exc_type, exc_value, traceback: lock.__exit__(exc_type, exc_value, traceback)
 
     def enter_fcntl(self):
-        log.info('Lockfile: %s' % self.path)
         self.fp = open(self.path, 'w')
         fcntl.flock(self.fp, fcntl.LOCK_EX)
 
     def exit_fcntl(self, exc_type, exc_value, traceback):
         self.fp.close()
-        log.info('remove %s' % self.path)
         os.remove(self.path)
 
     def use_fcntl(self):
