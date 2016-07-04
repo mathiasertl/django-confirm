@@ -151,13 +151,14 @@ class Confirmation(models.Model):
                               to=[self.payload['recipient']])
 
         if encrypt_to:  # refresh key from keyservers
-            # Receive key of recipient. We don't care about the result, because user might have
-            # already uploaded it.
-            gpg.recv_keys(settings.GPG_KEYSERVER, encrypt_to)
+            # Receive key of recipient. It's not a problem if this fails, only if the key isn't
+            # present afterwards - the key might have been added by different means.
+            result = gpg.recv_keys(settings.GPG_KEYSERVER, encrypt_to)
 
             # ... instead, we check if it is a known key after importing
             if encrypt_to not in [k['fingerprint'] for k in gpg.list_keys()]:
-                raise GpgFingerprintError("GPG key not found on keyservers.")
+                raise GpgFingerprintError("GPG key not found on keyservers: %s: %s",
+                                          encrypt_to, getattr(result, 'stderr'))
 
         elif self.payload.get('gpg_key'):  # import bare gpg key
             imported = settings.GPG.import_keys(self.payload['gpg_key'])
