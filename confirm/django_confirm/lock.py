@@ -42,7 +42,7 @@ class FileLock(object):
     """
 
     def __init__(self, path, cache_fallback=None):
-        self.path = '%s.lock' % path
+        self.path = path
         self.cache = cache_fallback
 
         # TODO: Memcached caches should be suitable as well:
@@ -69,10 +69,18 @@ class FileLock(object):
         self.enter = lambda: lock.__enter__()
         self.exit = lambda exc_type, exc_value, traceback: lock.__exit__(exc_type, exc_value, traceback)
 
+    def enter_fcntl(self):
+        self.fp = open(self.path, 'w')
+        fcntl.flock(self.fp, fcntl.LOCK_EX)
+
+    def exit_fcntl(self, exc_type, exc_value, traceback):
+        self.fp.close()
+        os.remove(self.path)
+
     def use_fcntl(self):
-        fp = open(self.path, 'w')
-        self.enter = lambda: fcntl.flock(fp, fcntl.LOCK_EX)
-        self.exit = lambda exc_type, exc_value, traceback: fp.close()
+        self.path = '%s.fcntl.lock' % self.path
+        self.enter = self.enter_fcntl
+        self.exit = self.exit_fcntl
 
     def __enter__(self):
         self.enter()
